@@ -40,10 +40,10 @@
     </div>
 
     <div class="container">
-      <div class="row main-container">
-        <%= content_tag :div, notice, :class => 'alert alert-success' if notice %>
-        <%= content_tag :div, alert, :class => 'alert alert-danger' if alert %>
+      <%= content_tag :div, notice, :class => 'alert alert-success' if notice %>
+      <%= content_tag :div, alert, :class => 'alert alert-danger' if alert %>
 
+      <div class="row main-container">
         <%= yield :content %>
       </div>
 

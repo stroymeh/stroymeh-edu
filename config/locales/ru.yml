@@ -4,5 +4,18 @@ ru:
 
   site_name: Строительная механика
 
+  activerecord:
+    attributes:
+      section:
+        title:       Название
+        description: Описание
+
   page_title:
     test: test
+
+    section:
+      index:  Все разделы
+      new:    Добавление нового раздела
+      create: Добавление нового раздела
+      edit:   Редактирование раздела
+      update: Редактирование раздела

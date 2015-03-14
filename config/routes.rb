@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :manage do
-    resources :sections
+    resources :sections, :except => :show
     resources :pages
+
+    root :to => 'sections#index'
   end
 
   resources :sections, :only => :index

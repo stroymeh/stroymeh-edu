@@ -1,10 +1,12 @@
-<%= content_for :content do %>
+<%= content_for :navigation do %>
   <div class="row">
     <div class="title col-lg-12">
       <%= render_navigation :context => :manage, :renderer => :breadcrumbs, :join_with => ' / ' %>
     </div>
   </div>
+<% end %>
 
+<%= content_for :content do %>
   <%= yield %>
 <% end %>
 

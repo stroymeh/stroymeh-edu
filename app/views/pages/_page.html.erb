@@ -1,0 +1,31 @@
+<div class="article">
+  <h3><%= link_to page, section_page_path(@section, page) %></h3>
+
+  <div class="details">
+  </div>
+
+  <span class="type pull-right">
+    <%= @section %>
+  </span>
+
+  <span class="date">
+    <%= l page.updated_at %>
+  </span>
+
+  <div class="content">
+    <%= page.content_html %>
+  </div>
+
+  <div class="meta">
+    <ul class="tags list-inline">
+      <li>Теги:</li>
+      <% page.tags_array.each do |tag| %>
+        <li><%= tag %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="btn-group">
+    <%= link_to 'Подробнее', section_page_path(@section, page), :class => 'btn btn-default btn-sm' %>
+  </div>
+</div>

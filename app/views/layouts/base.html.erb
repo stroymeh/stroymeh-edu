@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="navbar navbar-red navbar-static-top" role="navigation">
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <%= link_to t('site_name'), root_path, :class => 'navbar-brand' %>
@@ -45,15 +45,7 @@
 
       <%= yield :navigation %>
 
-      <div class="row main-container">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main">
-          <%= yield :content %>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar">
-          <%= yield :sidebar %>
-        </div>
-      </div>
+      <%= yield :content %>
 
       <div class="footer">
         &copy; <%= Time.zone.now.year %> <%= t('site_name') %>

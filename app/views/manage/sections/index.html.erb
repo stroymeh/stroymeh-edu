@@ -1,5 +1,25 @@
-<ul>
-  <%= render @sections %>
-</ul>
+<div role="tabpanel">
+  <%= link_to 'Добавить раздел', new_manage_section_path, :class => 'btn btn-primary btn-sm pull-right' %>
 
-<%= link_to 'Добавить раздел', new_manage_section_path, :class => 'btn btn-primary btn-sm' %>
+  <ul class="nav nav-tabs js-nav-tabs" role="tablist">
+    <% @sections.each do |section| %>
+      <li role="presentation"><%= link_to section, "##{section.slug}", :data => { :toggle => :tab }, :role => :tab %></li>
+    <% end %>
+  </ul>
+
+  <div class="tab-content">
+    <% @sections.each do |section| %>
+      <div role="tabpanel" class="tab-pane" id="<%= section.slug %>">
+        <ul class="list-group">
+          <% if section.pages.any? %>
+            <%= render section.pages %>
+          <% else %>
+            <li class="list-group-item">В этот раздел еще не добавляли страниц</li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= link_to 'Добавить страницу', new_manage_page_path, :class => 'btn btn-primary btn-sm' %>
+  </div>
+</div>

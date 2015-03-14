@@ -3,6 +3,7 @@
 //= require jquery-ui/sortable
 //= require bootstrap/dropdown
 //= require bootstrap/transition
-//= require bootstrap/carousel
+//= require bootstrap/tab
 //= require dropzone
+//= require main
 //= require_tree .

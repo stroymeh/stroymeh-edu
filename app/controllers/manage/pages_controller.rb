@@ -1,17 +1,17 @@
 class Manage::PagesController < Manage::ApplicationController
   inherit_resources
-  actions :all, :except => :show
+  actions :all, :except => [:index, :show]
 
   def create
-    create!(:notice => 'Страница добавлена успешно!')
+    create!(:notice => 'Страница добавлена успешно!') { manage_root_path }
   end
 
   def update
-    update!(:notice => 'Страница сохранена.')
+    update!(:notice => 'Страница сохранена.') { manage_root_path }
   end
 
   def destroy
-    destroy!(:notice => 'Страница успешно удалена!') { manage_pages_path }
+    destroy!(:notice => 'Страница успешно удалена!') { manage_root_path }
   end
 
   private

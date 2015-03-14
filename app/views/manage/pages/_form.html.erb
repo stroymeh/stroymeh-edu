@@ -1,0 +1,15 @@
+<%= simple_form_for(@page, :url => [:manage, @page]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :section %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.input :tags %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Сохранить', :class => 'btn btn-primary btn-sm' %>
+    <%= link_to 'Отмена', manage_pages_path, :class => 'btn btn-default btn-sm' %>
+  </div>
+<% end %>

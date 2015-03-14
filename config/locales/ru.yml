@@ -10,6 +10,12 @@ ru:
         title:       Название
         description: Описание
 
+      page:
+        title:   Заголовок
+        content: Содержимое
+        tags:    Теги
+        section: Раздел
+
   page_title:
     test: test
 

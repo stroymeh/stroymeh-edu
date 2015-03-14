@@ -20,15 +20,18 @@
     .navbar-nav
       margin: 6px 10px
 
-.navbar-right
+  .navbar-right
 
-  a
-    padding: 7px 10px
+    &:last-child
+      margin-right: 0 !important
 
-  img
-    +border-radius(25px)
-    height: 35px
-    width: 35px
+    .profile
+      line-height: 50px
+
+    img
+      +border-radius(25px)
+      height: 35px
+      width: 35px
 
 .main-container
   background: #f6f6f6

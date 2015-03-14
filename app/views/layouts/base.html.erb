@@ -14,21 +14,21 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
+            <% if can? :manage, :all %>
+              <li><%= link_to 'Управление', manage_root_path %></li>
+            <% end %>
+            <% Section.all.each do |section| %>
+              <li>
+                <%= link_to section, section.slug %>
+              </li>
+            <% end %>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li class="dropdown profile">
-                <%= link_to '#', :class => 'dropdown-toggle', :data => { :toggle => :dropdown } do %>
-                  <%= image_tag current_user.gravatar_url %>
-                  <%= current_user.email %>
-                <% end %>
-                <ul class="dropdown-menu">
-                  <% if can? :manage, :all %>
-                    <li><%= link_to 'Управление', manage_root_path %></li>
-                  <% end %>
-                  <li><%= link_to 'Выход', destroy_user_session_path, :method => :delete %></li>
-                </ul>
+              <li class="profile">
+                <%= image_tag current_user.gravatar_url %>
+                <%= current_user.email %>
               </li>
             <% else %>
               <li class="sign-in" role="presentation"><%= link_to 'Вход', new_user_session_path %></li>

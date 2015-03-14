@@ -1,4 +1,4 @@
 class SectionsController < ApplicationController
-  def index
-  end
+  inherit_resources
+  actions :all, :index, :show
 end

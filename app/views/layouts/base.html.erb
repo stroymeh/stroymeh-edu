@@ -19,7 +19,7 @@
             <% end %>
             <% Section.all.each do |section| %>
               <li>
-                <%= link_to section, section.slug %>
+                <%= link_to section, section_path(section) %>
               </li>
             <% end %>
           </ul>

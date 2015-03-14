@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     root :to => 'sections#index'
   end
 
-  resources :sections, :only => :index
+  resources :sections, :only => [:index, :show], :path => ''
 
   root :to => 'sections#index'
 end

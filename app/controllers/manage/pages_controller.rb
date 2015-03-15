@@ -9,11 +9,11 @@ class Manage::PagesController < Manage::ApplicationController
   end
 
   def create
-    create!(:notice => 'Страница добавлена успешно!') { manage_root_path }
+    create!(:notice => 'Страница добавлена успешно!') { manage_root_path(:anchor => @page.section) }
   end
 
   def update
-    update!(:notice => 'Страница сохранена.') { manage_root_path }
+    update!(:notice => 'Страница сохранена.') { manage_root_path(:anchor => @page.section) }
   end
 
   def destroy

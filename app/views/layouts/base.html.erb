@@ -17,7 +17,7 @@
             <% if can? :manage, :all %>
               <li><%= link_to 'Управление', manage_root_path %></li>
             <% end %>
-            <% Section.all.each do |section| %>
+            <% Section.ordered.each do |section| %>
               <li>
                 <%= link_to section, section_path(section) %>
               </li>

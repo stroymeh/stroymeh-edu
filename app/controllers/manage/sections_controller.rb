@@ -16,6 +16,10 @@ class Manage::SectionsController < Manage::ApplicationController
 
   private
 
+  def collection
+    @sections = Section.ordered
+  end
+
   def permitted_params
     params.permit(:section => [:title, :description])
   end

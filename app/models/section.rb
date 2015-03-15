@@ -3,6 +3,8 @@ class Section < ActiveRecord::Base
 
   validates_presence_of :title, :description
 
+  scope :ordered, -> { order(:created_at) }
+
   alias_attribute :to_s, :title
 
   include AutoHtml

@@ -9,13 +9,6 @@ class Page < ActiveRecord::Base
 
   alias_attribute :to_s, :title
 
-  include AutoHtml
-  auto_html_for :content do
-    html_escape
-    image
-    simple_format
-  end
-
   extend FriendlyId
   friendly_id :title, :use => [:slugged, :finders]
 

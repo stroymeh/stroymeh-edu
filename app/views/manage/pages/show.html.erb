@@ -8,10 +8,13 @@
         <span class="date">
           <%= l @page.updated_at, :format => :long %>
         </span>
+        <span class="pull-right">
+          <%= link_to 'Редактировать', edit_manage_page_path(@page) %>
+        </span>
       </div>
 
       <div class="content">
-        <%= @page.content_html %>
+        <%= markdown(@page.content) %>
       </div>
     </div>
 

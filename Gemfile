@@ -21,6 +21,7 @@ group :default do
   gem 'jquery-ui-rails'
   gem 'pg'
   gem 'rails',                         '~> 4.2.0'
+  gem 'redcarpet'
   gem 'rmagick'
   gem 'russian'
   gem 'sass-rails',                    '~> 5.0'

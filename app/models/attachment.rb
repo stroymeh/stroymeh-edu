@@ -16,4 +16,8 @@ class Attachment < ActiveRecord::Base
   def is_image?
     %w(jpg jpeg png).include?(content_type)
   end
+
+  def is_pdf?
+    'pdf'.include?(content_type)
+  end
 end

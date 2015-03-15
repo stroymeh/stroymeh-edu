@@ -10,7 +10,7 @@
   <div class="tab-content">
     <% @sections.each do |section| %>
       <div role="tabpanel" class="tab-pane" id="<%= section.slug %>">
-        <ul class="list-group">
+        <ul class="list-group pages">
           <% if section.pages.any? %>
             <%= render section.pages %>
           <% else %>

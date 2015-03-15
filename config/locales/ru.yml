@@ -2,6 +2,9 @@ ru:
   cancan:
     access_denied: Доступ запрещен
 
+  confirm:
+    destroy: Вы уверены?
+
   site_name: Строительная механика
 
   activerecord:

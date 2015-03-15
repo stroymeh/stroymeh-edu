@@ -1,0 +1,28 @@
+<div class="row main-container">
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main">
+
+    <div class="article">
+      <h3><%= @page %></h3>
+
+      <div class="details">
+        <span class="date">
+          <%= l @page.updated_at, :format => :long %>
+        </span>
+      </div>
+
+      <div class="content">
+        <%= @page.content_html %>
+      </div>
+    </div>
+
+    <h4>Загруженные файлы:</h4>
+
+    <div class="row">
+      <%= render @attachments %>
+    </div>
+
+    <%= simple_form_for([:manage, @page, @page.attachments.new], :html => { :multipart => true, :class => 'dropzone js-dropzone' }) do |f| %>
+      <%= f.input :file, :as => :hidden, :input_html => { :multiple => true, :name => 'page[file]' }, :wrapper_html => { :class => :failback } %>
+    <% end %>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 class Page < ActiveRecord::Base
   belongs_to :section
 
+  has_many :attachments, :dependent => :destroy
+
   validates_presence_of :title, :content, :tags, :section_id
 
   alias_attribute :to_s, :title

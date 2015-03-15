@@ -1,6 +1,12 @@
 class Manage::PagesController < Manage::ApplicationController
   inherit_resources
-  actions :all, :except => [:index, :show]
+  actions :all, :except => :index
+
+  def show
+    show! {
+      @attachments = @page.attachments
+    }
+  end
 
   def create
     create!(:notice => 'Страница добавлена успешно!') { manage_root_path }

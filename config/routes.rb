@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   namespace :manage do
     resources :sections, :except => :show
-    resources :pages, :except => [:index, :show]
+    resources :pages, :except => :index do
+      resources :attachments
+    end
 
     root :to => 'sections#index'
   end

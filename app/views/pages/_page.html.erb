@@ -21,14 +21,13 @@
     <%= page.content_html %>
   </div>
 
-  <div class="meta">
-    <ul class="tags list-inline">
-      <li>Теги:</li>
-      <% page.tags_array.each do |tag| %>
-        <li><%= tag %></li>
-      <% end %>
-    </ul>
-  </div>
+  <% unless controller_name == 'pages' %>
+    <div class="meta">
+      <%= render :partial => 'commons/tags', :locals => { :page => page } %>
+    </div>
+  <% else %>
+    <%= render :partial => 'commons/tags_with_likes', :locals => { :page => page } %>
+  <% end %>
 
   <% unless controller_name == 'pages' %>
     <div class="btn-group">

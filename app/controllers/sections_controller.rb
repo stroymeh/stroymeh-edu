@@ -1,6 +1,10 @@
 class SectionsController < ApplicationController
   inherit_resources
-  actions :index, :show
+  actions :show
+
+  def index
+    @pages = Page.ordered
+  end
 
   def show
     show!{

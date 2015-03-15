@@ -5,6 +5,8 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title, :content, :tags, :section_id
 
+  scope :ordered, -> { order('updated_at desc') }
+
   alias_attribute :to_s, :title
 
   include AutoHtml

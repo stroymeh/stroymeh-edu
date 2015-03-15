@@ -1,5 +1,11 @@
 <div class="article">
-  <h3><%= link_to page, section_page_path(@section, page) %></h3>
+  <h3>
+    <% unless controller_name == 'pages' %>
+      <%= link_to page, section_page_path(@section, page) %>
+    <% else %>
+      <%= page %>
+    <% end %>
+  </h3>
 
   <div class="details">
     <span class="type pull-right">
@@ -24,7 +30,9 @@
     </ul>
   </div>
 
-  <div class="btn-group">
-    <%= link_to 'Подробнее', section_page_path(@section, page), :class => 'btn btn-default btn-sm' %>
-  </div>
+  <% unless controller_name == 'pages' %>
+    <div class="btn-group">
+      <%= link_to 'Подробнее', section_page_path(@section, page), :class => 'btn btn-default btn-sm' %>
+    </div>
+  <% end %>
 </div>

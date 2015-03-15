@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
   inherit_resources
-  actions :all, :index, :show
+  actions :index, :show
 
   def show
     show!{

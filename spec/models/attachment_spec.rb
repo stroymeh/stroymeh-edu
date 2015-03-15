@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Attachment, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Attachment do
+  describe "validations" do
+    subject { FactoryGirl.build(:attachment) }
+
+    it { should be_valid }
+  end
 end

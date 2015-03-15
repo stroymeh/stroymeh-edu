@@ -2,15 +2,14 @@
   <h3><%= link_to page, section_page_path(@section, page) %></h3>
 
   <div class="details">
+    <span class="type pull-right">
+      <%= @section %>
+    </span>
+
+    <span class="date">
+      <%= l page.updated_at, :format => :long %>
+    </span>
   </div>
-
-  <span class="type pull-right">
-    <%= @section %>
-  </span>
-
-  <span class="date">
-    <%= l page.updated_at %>
-  </span>
 
   <div class="content">
     <%= page.content_html %>

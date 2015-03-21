@@ -19,17 +19,19 @@
 
   <div class="content">
     <%= markdown(page.content) %>
-  </div>
 
-  <% if controller_name == 'pages' %>
-    <% if page.attachments.any? %>
-      <% page.attachments.each do |attachment| %>
-        <% if attachment.is_pdf? %>
-          <iframe src="<%= attachment.file.url %>" style="width:813px; height:700px;" frameborder="0"></iframe>
+    <% if controller_name == 'pages' %>
+      <% if page.attachments.any? %>
+        <% page.attachments.each do |attachment| %>
+          <% if attachment.is_image? %>
+            <%= image_tag attachment.file.url, :alt => page, :title => page %>
+          <% elsif attachment.is_pdf? %>
+            <iframe src="<%= attachment.file.url %>" style="width:813px; height:700px;" frameborder="0"></iframe>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
 
   <% unless controller_name == 'pages' %>
     <div class="meta">

@@ -3,12 +3,12 @@ class SectionsController < ApplicationController
   actions :show
 
   def index
-    @pages = Page.ordered
+    @pages = Page.roots.ordered
   end
 
   def show
     show!{
-      @pages = @section.pages
+      @pages = @section.pages.roots
     }
   end
 end

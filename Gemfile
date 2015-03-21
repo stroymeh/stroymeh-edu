@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 group :default do
+  gem 'ancestry'
   gem 'auto_html'
   gem 'bootstrap-sass'
   gem 'cancancan',                     '~> 1.10'

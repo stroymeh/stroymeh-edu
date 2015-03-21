@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150315072057) do
+ActiveRecord::Schema.define(version: 20150321140952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,10 +31,13 @@ ActiveRecord::Schema.define(version: 20150315072057) do
     t.text     "content"
     t.text     "tags"
     t.integer  "section_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "ancestry"
+    t.integer  "ancestry_depth", default: 0
   end
 
+  add_index "pages", ["ancestry"], name: "index_pages_on_ancestry", using: :btree
   add_index "pages", ["section_id"], name: "index_pages_on_section_id", using: :btree
 
   create_table "permissions", force: :cascade do |t|

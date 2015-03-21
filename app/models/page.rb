@@ -9,6 +9,8 @@ class Page < ActiveRecord::Base
 
   alias_attribute :to_s, :title
 
+  has_ancestry :cache_depth => true
+
   extend FriendlyId
   friendly_id :title, :use => [:slugged, :finders]
 

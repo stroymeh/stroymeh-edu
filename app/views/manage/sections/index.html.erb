@@ -12,7 +12,7 @@
       <div role="tabpanel" class="tab-pane" id="<%= section.slug %>">
         <ul class="list-group pages">
           <% if section.pages.any? %>
-            <%= render section.pages %>
+            <%= render section.pages.roots %>
           <% else %>
             <li class="list-group-item">В этот раздел еще не добавляли страниц</li>
           <% end %>

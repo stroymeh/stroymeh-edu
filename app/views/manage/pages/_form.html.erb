@@ -3,6 +3,7 @@
 
   <div class="form-inputs">
     <%= f.association :section %>
+    <%= f.input :parent_id, :collection => Page.all %>
     <%= f.input :title %>
     <%= f.input :content, :input_html => { :class => 'editor' } %>
     <%= f.input :tags %>

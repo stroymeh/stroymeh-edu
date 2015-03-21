@@ -23,6 +23,6 @@ class Manage::PagesController < Manage::ApplicationController
   private
 
   def permitted_params
-    params.permit(:page => [:title, :content, :tags, :section_id])
+    params.permit(:page => [:title, :content, :tags, :section_id, :parent_id])
   end
 end

@@ -14,11 +14,12 @@ ru:
         description: Описание
 
       page:
-        title:   Заголовок
-        content: Содержимое
-        tags:    Теги
-        section: Раздел
+        content:    Содержимое
         parent_id:  Родительская страница
+        section:    Раздел
+        tags:       Теги
+        title:      Заголовок
+        typeform:   Код из typeform
 
   page_title:
     test: test

@@ -39,6 +39,8 @@
     <%= markdown(page.content) %>
 
     <% if controller_name == 'pages' %>
+      <%= render :partial => 'commons/typeform', :locals => { :page => page } %>
+
       <% if page.attachments.any? %>
         <% page.attachments.each do |attachment| %>
           <% if attachment.is_image? %>

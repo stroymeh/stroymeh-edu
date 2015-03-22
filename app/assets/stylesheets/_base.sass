@@ -191,12 +191,11 @@ textarea
       border: 1px solid #ddd !important
 
 .tab-content
-  .list-group-item
-    +border-top-left-radius(0)
-    +border-top-right-radius(0)
+  .list-group
+    &.pages
+      margin: 20px 0
 
-    &:first-child
-      border-top: none
+  .list-group-item
 
     &.odd
       background: #fff

@@ -21,6 +21,10 @@
     <% unless controller_name == 'pages' %>
       <%= link_to page, section_page_path(@section, page) %>
     <% else %>
+      <% unless page.is_root? %>
+        <%= link_to page.parent, section_page_path(@section, page.parent) %> /
+      <% end %>
+
       <%= page %>
     <% end %>
   </h3>

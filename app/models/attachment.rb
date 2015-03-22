@@ -6,7 +6,7 @@ class Attachment < ActiveRecord::Base
   validates_presence_of :file
 
   def content_type
-    file.content_type.split('/').last
+    file.file.extension
   end
 
   def human_filename

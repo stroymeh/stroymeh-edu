@@ -14,6 +14,10 @@ class Page < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, :use => [:slugged, :finders]
 
+  def should_generate_new_friendly_id?
+    true
+  end
+
   def tags_array
     tags.split(', ')
   end

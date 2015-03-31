@@ -20,7 +20,9 @@
       </div>
 
       <% if @page.has_children? %>
-        <%= render @page.children %>
+        <ul class="list-group js-sortable js-connected-sortable" data-sort-url="<%= manage_page_sort_path(@page) %>">
+          <%= render @page.children.sorted %>
+        </ul>
       <% end %>
     </div>
 

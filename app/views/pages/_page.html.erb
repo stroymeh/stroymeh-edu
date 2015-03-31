@@ -7,7 +7,7 @@
         </li>
       <% end unless page.is_root? %>
 
-      <% page.children.each do |page| %>
+      <% page.children.sorted.each do |page| %>
         <li>
           <%= link_to page, section_page_path(@section, page) %>
         </li>

@@ -6,6 +6,7 @@ class Page < ActiveRecord::Base
   validates_presence_of :title, :content, :tags, :section_id
 
   scope :ordered, -> { order('updated_at desc') }
+  scope :sorted, -> { order('position asc') }
 
   alias_attribute :to_s, :title
 
@@ -20,5 +21,11 @@ class Page < ActiveRecord::Base
 
   def tags_array
     tags.split(', ')
+  end
+
+  def sort_childrens(items)
+    items.each_with_index do |id, index|
+      Page.find(id).update_attributes(:position => index + 1)
+    end
   end
 end

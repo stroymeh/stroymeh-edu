@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   namespace :manage do
     resources :sections, :except => :show
+
     resources :pages, :except => :index do
       resources :attachments, :except => [:index, :show]
+
+      post 'sort' => 'pages#sort', :as => :sort
     end
 
     root :to => 'sections#index'

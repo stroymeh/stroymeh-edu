@@ -1,7 +1,7 @@
 <%= content_for :sidebar do %>
   <div class="navigation">
     <ul>
-      <% page.siblings.each do |page| %>
+      <% page.siblings.sorted.each do |page| %>
         <li>
           <%= link_to page, section_page_path(@section, page) %>
         </li>

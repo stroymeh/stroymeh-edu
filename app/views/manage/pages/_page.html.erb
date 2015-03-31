@@ -26,8 +26,6 @@
   </div>
 <% else %>
   <li class="list-group-item <%= cycle("odd", "even") %>" id="page_<%= page.id %>">
-    <span class="glyphicon glyphicon-sort"></span>
-
     <%= link_to page.title, manage_page_path(page) %>
 
     <div class="pull-right actions">

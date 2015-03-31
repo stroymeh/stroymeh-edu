@@ -11,7 +11,7 @@
 
     <div class="panel-body">
       <ul class="list-group">
-        <% page.children.each do |page| %>
+        <% page.children.sorted.each do |page| %>
           <li class="list-group-item">
             <%= link_to page.title, manage_page_path(page) %>
 

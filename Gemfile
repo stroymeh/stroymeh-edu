@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 group :default do
+  gem 'acts-as-taggable-on',           '~> 3.4'
   gem 'ancestry'
   gem 'auto_html'
   gem 'bootstrap-sass'

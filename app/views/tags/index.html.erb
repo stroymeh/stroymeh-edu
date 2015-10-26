@@ -1,0 +1,5 @@
+<h1 class="page-title">Все страницы с тегом &laquo;<%= @tag %>&raquo;</h1>
+
+<% @collection.each do |item| %>
+  <%= render :partial => 'pages/page', :locals => { :page => item.taggable, :@section => item.taggable.section } %>
+<% end %>

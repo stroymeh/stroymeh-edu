@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     root :to => 'sections#index'
   end
 
+  get 'tags/:tag' => 'tags#index', :as => :tags
+
   resources :sections, :only => [:index, :show], :path => '' do
     resources :pages, :only => :show, :path => ''
   end

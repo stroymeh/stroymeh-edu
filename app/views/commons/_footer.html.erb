@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="footer">
+    &copy; <%= Time.zone.now.year %> <%= t('site_name') %>
+
+    <ul class="list-inline pull-right">
+      <% Section.ordered.each do |section| %>
+        <li>
+          <%= link_to section, section_path(section) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

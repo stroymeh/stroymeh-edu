@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.2.3'
 
 group :default do
   gem 'ancestry'
@@ -42,7 +42,6 @@ end
 group :development do
   gem 'hirb'
   gem 'quiet_assets'
-  gem 'thin'
 end
 
 group :test do

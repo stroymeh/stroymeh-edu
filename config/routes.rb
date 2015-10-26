@@ -17,6 +17,11 @@ Rails.application.routes.draw do
 
   get 'tags/:tag' => 'tags#index', :as => :tags
 
+  # legacy routes
+  Hashie::Mash.new(YAML.load_file(Rails.root.join('config', 'legacy_routes.yml'))).each do |key, value|
+    get key => redirect(value)
+  end
+
   resources :sections, :only => [:index, :show], :path => '' do
     resources :pages, :only => :show, :path => ''
   end

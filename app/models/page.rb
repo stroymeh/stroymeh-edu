@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+  acts_as_taggable
+
   belongs_to :section
 
   has_many :attachments, :dependent => :destroy

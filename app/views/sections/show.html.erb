@@ -3,11 +3,16 @@
     <%= @section.description_html %>
   </div>
 
-  <div class="blog-tags">
-    <ul>
-      <li>Теги:</li>
-    </ul>
-  </div>
+  <% if @tags.any? %>
+    <div class="blog-tags">
+      <h4>Теги:</h4>
+      <ul class="list-inline">
+        <% @tags.each do |tag| %>
+          <li><%= link_to tag.name, tags_path(tag.name) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <% end %>
 
 <%= render @pages %>

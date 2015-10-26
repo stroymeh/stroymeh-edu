@@ -9,6 +9,7 @@ class SectionsController < ApplicationController
   def show
     show!{
       @pages = @section.pages.roots
+      @tags = @pages.flat_map(&:tags)
     }
   end
 end

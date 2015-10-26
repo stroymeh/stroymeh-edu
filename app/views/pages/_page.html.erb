@@ -31,7 +31,10 @@
 
   <div class="details">
     <span class="type pull-right">
-      <%= @section %>
+      <%= link_to section_path(@section) do %>
+        <i class="fa fa-bookmark"></i>
+        <%= @section %>
+      <% end %>
     </span>
 
     <span class="date">

@@ -15,6 +15,7 @@ group :default do
   gem 'dropzonejs-rails'
   gem 'enumerize'
   gem 'fog'
+  gem 'font-awesome-sass',             '~> 4.4.0'
   gem 'friendly_id',                   '~> 5.1.0'
   gem 'grape'
   gem 'gravtastic'

@@ -63,12 +63,23 @@
   .details
     +clearfix
     color: #999
-    margin: 5px 0
+    margin: 10px 0 5px 0
 
     .type
-      border: 1px solid #ccc
-      font-size: 12px
-      padding: 3px 5px
+      font-size: 14px
+
+      a
+        +border-radius(2px)
+        border: 1px solid #16bb8e
+        color: #16bb8e
+        padding: 4px 10px
+
+        &:hover, &:active, &:focus
+          text-decoration: none
+
+        &:hover
+          background: #16bb8e
+          color: #fff
 
   .content
     .typeform

@@ -5,7 +5,7 @@ class Page < ActiveRecord::Base
 
   has_many :attachments, :dependent => :destroy
 
-  validates_presence_of :title, :content, :tags, :section_id
+  validates_presence_of :title, :content, :section_id
 
   scope :ordered, -> { order('updated_at desc') }
   scope :sorted, -> { order('position asc') }
@@ -19,10 +19,6 @@ class Page < ActiveRecord::Base
 
   def should_generate_new_friendly_id?
     true
-  end
-
-  def tags_array
-    tags.split(', ')
   end
 
   def sort_childrens(items)

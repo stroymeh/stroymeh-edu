@@ -2,12 +2,12 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :section %>
-    <%= f.input :parent_id, :collection => Page.all %>
+    <%= f.input :section_id, :as => :select, :collection => Section.all, :input_html => { :class => 'js-select' } %>
+    <%= f.input :parent_id, :as => :select, :collection => Page.all, :input_html => { :class => 'js-select' } %>
     <%= f.input :title %>
     <%= f.input :content, :input_html => { :class => 'editor' } %>
     <%= f.input :typeform, :input_html => { :class => 'editor' } %>
-    <%= f.input :tags %>
+    <%= f.input :tag_list, :as => :select, :collection => ActsAsTaggableOn::Tag.pluck(:name), :input_html => { :class => 'js-select-tags', :multiple => true } %>
   </div>
 
   <div class="form-actions">

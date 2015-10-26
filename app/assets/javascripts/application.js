@@ -5,5 +5,6 @@
 //= require bootstrap/transition
 //= require bootstrap/tab
 //= require dropzone
+//= require select2
 //= require main
 //= require_tree .

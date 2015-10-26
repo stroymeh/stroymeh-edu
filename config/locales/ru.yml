@@ -16,8 +16,8 @@ ru:
       page:
         content:    Содержимое
         parent_id:  Родительская страница
-        section:    Раздел
-        tags:       Теги
+        section_id: Раздел
+        tag_list:   Теги
         title:      Заголовок
         typeform:   Код из typeform
 

@@ -2,7 +2,7 @@
   if $('.js-select-tags').length
     $('.js-select-tags').select2
       tags: true
-      tokenSeparators: [',', ' ']
+      tokenSeparators: [',']
 
   if $('.js-select').length
     $('.js-select').select2

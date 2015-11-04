@@ -40,6 +40,9 @@ GEM
     acts-as-taggable-on (3.5.0)
       activerecord (>= 3.2, < 5)
     addressable (2.3.7)
+    airbrake (4.1.0)
+      builder
+      multi_json
     ancestry (2.1.0)
       activerecord (>= 3.0.0)
     arel (6.0.3)
@@ -420,6 +423,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
+  airbrake
   ancestry
   auto_html
   bootstrap-sass

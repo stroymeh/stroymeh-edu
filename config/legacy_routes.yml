@@ -1,3 +1,4 @@
+'/metodicheskie-posobiya': '/uchebnye-posobiya'
 '/metodicheskie-posobiya/tags/численные-методы.html': '/metodicheskie-posobiya'
 '/metodicheskie-posobiya/tags/курс-лекций.html': '/metodicheskie-posobiya'
 '/metodicheskie-posobiya/tags/материалы.html': '/tags/материалы'
@@ -8,6 +9,7 @@
 '/metodicheskie-posobiya/tags/расчет-балки.html': '/tags/расчет%20балки'
 '/metodicheskie-posobiya/tags/методические-указания.html': '/tags/материалы'
 '/metodicheskie-posobiya/tags/метод-сил.html': '/tags/метод%20сил'
+'/programmy-dlya-rascheta': '/programmy'
 '/programmy-dlya-rascheta/tags/программа.html': '/tags/программа'
 '/programmy-dlya-rascheta/tags/arka.html': '/tags/arka'
 '/programmy-dlya-rascheta/tags/beam.html': '/tags/beam'
@@ -17,3 +19,4 @@
 '/programmy-dlya-rascheta/tags/office.html': '/tags/scad%20office'
 '/programmy-dlya-rascheta/tags/демо-версия.html': '/tags/scad%20office'
 '/programmy-dlya-rascheta/tags/astra.html': '/tags/astra'
+

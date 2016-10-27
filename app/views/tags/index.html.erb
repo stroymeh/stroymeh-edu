@@ -1,5 +1,7 @@
 <h1 class="page-title">Все страницы с тегом &laquo;<%= @tag %>&raquo;</h1>
 
-<% @pages.each do |item| %>
-  <%= render :partial => 'pages/page', :locals => { :page => item.taggable, :@section => item.taggable.section } %>
+<% if @pages.present? %>
+  <% @pages.each do |item| %>
+    <%= render :partial => 'pages/page', :locals => { :page => item.taggable, :@section => item.taggable.section } %>
+  <% end %>
 <% end %>

@@ -1,6 +1,8 @@
-<div class="meta pull-left">
-  <%= render :partial => 'commons/tags', :locals => { :page => page } %>
-</div>
+<% if page.tags.present? %>
+  <div class="meta pull-left">
+    <%= render :partial => 'commons/tags', :locals => { :page => page } %>
+  </div>
+<% end %>
 
 <div class="pull-right hidden-xs hidden-sm">
   <%= render :partial => 'commons/likes' %>

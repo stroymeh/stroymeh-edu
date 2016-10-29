@@ -1,6 +1,8 @@
-<ul class="tags list-inline">
-  <li>Теги:</li>
-  <% page.tags.each do |tag| %>
-    <li><%= link_to tag.name, tags_path(tag.name) %></li>
-  <% end %>
-</ul>
+<% if page.tags.present? %>
+  <ul class="tags list-inline">
+    <li>Теги:</li>
+    <% page.tags.each do |tag| %>
+      <li><%= link_to tag.name, tags_path(tag.name) %></li>
+    <% end %>
+  </ul>
+<% end %>

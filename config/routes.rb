@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   end
 
   resources :sections, :only => [:index, :show], :path => '' do
+    get 'page/:page', controller: :sections, action: :index, on: :collection
+
     resources :pages, :only => :show, :path => ''
   end
 

@@ -3,7 +3,7 @@ class SectionsController < ApplicationController
   actions :show
 
   def index
-    @pages = Page.roots.ordered
+    @pages = Page.roots.ordered.page(params[:page]).per(10)
   end
 
   def show

@@ -23,14 +23,15 @@ group :default do
   gem 'inherited_resources',           '~> 1.6.0'
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
+  gem 'kaminari'
   gem 'pg'
   gem 'rails',                         '~> 4.2.5'
   gem 'redcarpet'
   gem 'rmagick'
   gem 'russian'
   gem 'sass-rails',                    '~> 5.0'
-  gem 'simple-navigation'
   gem 'simple_form'
+  gem 'simple-navigation'
   gem 'uglifier',                      '>= 1.3.0'
 end
 

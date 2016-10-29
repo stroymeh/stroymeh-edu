@@ -1,3 +1,5 @@
 <% @pages.each do |page| %>
   <%= render :partial => 'pages/page', :locals => { :page => page, :@section => page.section } %>
 <% end %>
+
+<%= paginate @pages %>

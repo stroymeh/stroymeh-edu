@@ -40,3 +40,9 @@ ru:
 
     tags:
       index:  Все страницы с тегом
+
+  views:
+    pagination:
+      previous: В начало
+      next: дальше
+      truncate: ...

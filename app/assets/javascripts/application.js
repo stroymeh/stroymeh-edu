@@ -6,5 +6,6 @@
 //= require bootstrap/tab
 //= require dropzone
 //= require select2
+//= require textarea-autosize
 //= require main
 //= require_tree .

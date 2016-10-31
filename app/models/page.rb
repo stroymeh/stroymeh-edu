@@ -7,7 +7,7 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title, :section_id
 
-  scope :ordered, -> { order('updated_at desc') }
+  scope :ordered, -> { order('title asc') }
   scope :sorted, -> { order('position asc') }
 
   alias_attribute :to_s, :title

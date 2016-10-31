@@ -13,6 +13,7 @@ group :default do
   gem 'coffee-rails',                  '~> 4.1.0'
   gem 'compass-rails'
   gem 'devise'
+  gem 'dotenv-rails'
   gem 'dropzonejs-rails'
   gem 'enumerize'
   gem 'fog'
@@ -36,7 +37,6 @@ group :default do
 end
 
 group :development, :test do
-  gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'sqlite3'

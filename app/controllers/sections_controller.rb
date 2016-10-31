@@ -3,7 +3,7 @@ class SectionsController < ApplicationController
   actions :show
 
   def index
-    @pages = Page.roots.ordered.page(params[:page]).per(10)
+    redirect_to Section.first
   end
 
   def show

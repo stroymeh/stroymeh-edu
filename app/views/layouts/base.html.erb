@@ -16,7 +16,7 @@
                 <%= link_to section, section_path(section), class: :link %>
               </li>
             <% end %>
-            <li><%= link_to t('site_name'), root_path, class: :link %></li>
+            <li><%= link_to t('site_name'), '#', class: :link %></li>
             <% if can? :manage, :all %>
               <li><%= link_to 'Управление', manage_root_path %></li>
             <% end %>

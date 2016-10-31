@@ -5,7 +5,7 @@ ru:
   confirm:
     destroy: Вы уверены?
 
-  site_name: Строительная механика
+  site_name: Метод конечных элементов в примерах и задачах
 
   activerecord:
     attributes:

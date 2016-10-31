@@ -4,6 +4,7 @@
 //= require bootstrap/dropdown
 //= require bootstrap/transition
 //= require bootstrap/tab
+//= require bootstrap/modal
 //= require dropzone
 //= require select2
 //= require textarea-autosize

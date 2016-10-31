@@ -1,18 +1,20 @@
 <%= content_for :sidebar do %>
-  <div class="files">
-    <ul class="media-list">
-      <% @page.attachments.each do |attachment| %>
-        <li class="media">
-          <div class="file-type pull-left">
-            <%= attachment.content_type %>
-          </div>
-          <div class="media-body">
-            <%= link_to 'Скачать', attachment.file.url, :class => 'js-download-files' %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <% if @page.attachments.any? %>
+    <div class="files">
+      <ul class="media-list">
+        <% @page.attachments.each do |attachment| %>
+          <li class="media">
+            <div class="file-type pull-left">
+              <%= attachment.content_type %>
+            </div>
+            <div class="media-body">
+              <%= link_to 'Скачать', attachment.file.url, :class => 'js-download-files' %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <% end %>
 
 <%= render @page %>

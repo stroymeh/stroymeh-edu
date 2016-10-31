@@ -29,19 +29,6 @@
     <% end %>
   </h3>
 
-  <div class="details">
-    <span class="type pull-right">
-      <%= link_to section_path(@section) do %>
-        <i class="fa fa-bookmark"></i>
-        <%= @section %>
-      <% end %>
-    </span>
-
-    <span class="date">
-      <%= l page.updated_at, :format => :long %>
-    </span>
-  </div>
-
   <div class="content">
     <%= markdown(page.content) %>
 

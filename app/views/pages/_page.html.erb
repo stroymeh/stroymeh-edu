@@ -54,10 +54,4 @@
   <% else %>
     <%= render :partial => 'commons/tags_with_likes', :locals => { :page => page } %>
   <% end %>
-
-  <% unless controller_name == 'pages' %>
-    <div class="btn-group">
-      <%= link_to 'Подробнее', section_page_path(@section, page), :class => 'btn btn-default btn-sm' %>
-    </div>
-  <% end %>
 </div>

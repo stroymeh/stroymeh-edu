@@ -1,0 +1,19 @@
+<% pages.each do |page| %>
+  <div class="article">
+    <h3><%= link_to page, section_page_path(page.section, page) %></h3>
+
+    <div class="content">
+      <%= markdown(page.content) %>
+
+      <% if page.has_children? %>
+        <ul>
+          <% page.children.sorted.each do |page| %>
+            <li>
+              <%= link_to page, section_page_path(page.section, page) %>
+            </li>
+          <% end  %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+<% end %>

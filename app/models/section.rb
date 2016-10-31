@@ -1,5 +1,5 @@
 class Section < ActiveRecord::Base
-  has_many :pages, -> { order('updated_at desc') }, :dependent => :destroy
+  has_many :pages, -> { order('title asc') }, :dependent => :destroy
 
   validates_presence_of :title, :description
 
